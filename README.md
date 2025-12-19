@@ -56,7 +56,10 @@ redis-cli --cluster create \
 ```sh
 redis-cli -c -p 7000
 ```
-
+```cli
+SET bar 1
+(error) MOVED 5061 127.0.0.1:7003
+```
 ##### Cluster aware client
 ```sh
 redis-cli -c -p 7000
