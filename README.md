@@ -32,3 +32,15 @@ cp redis.conf 7004/
 sed -i s/7004/7005/ redis.conf
 cp redis.conf 7005/
 ```
+
+### Run
+```sh
+redis-server 7000/redis.conf &
+redis-server 7001/redis.conf &
+redis-server 7002/redis.conf &
+redis-server 7003/redis.conf &
+redis-server 7004/redis.conf &
+redis-server 7005/redis.conf &
+```
+
+
