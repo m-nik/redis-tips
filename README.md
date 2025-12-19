@@ -73,9 +73,10 @@ CLUSTER INFO
 ```
 
 ### Test failover
-```cli
-shutdown
+```sh
+redis-cli -p 7000 shutdown
 ```
+
 
 
 
