@@ -56,6 +56,11 @@ redis-cli --cluster create \
 ```sh
 redis-cli -c -p 7000
 ```
+
+##### Cluster aware client
+```sh
+redis-cli -c -p 7000
+```
 - Required `-c` to switch between nodes!
 ```cli
 SET foo 1
@@ -67,7 +72,10 @@ CLUSTER SLOTS
 CLUSTER INFO
 ```
 
-
+### Test failover
+```cli
+shutdown
+```
 
 
 
