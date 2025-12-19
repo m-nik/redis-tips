@@ -52,4 +52,24 @@ redis-cli --cluster create \
 ```
 
 
+### Test with redis-cli
+```sh
+redis-cli -c -p 7000
+```
+- Required `-c` to switch between nodes!
+```cli
+SET foo 1
+SET bar 1
+```
+```cli
+CLUSTER KEYSLOT foo
+CLUSTER SLOTS
+CLUSTER INFO
+```
+
+
+
+
+
+
 
