@@ -66,3 +66,12 @@ redis-server /opt/redis/sentinel3/sentinel.conf --sentinel &
 redis-cli -p 6379 info replication
 ```
 
+### Sentinels info
+```sh
+redis-cli -p 26379 sentinel masters
+redis-cli -p 26379 sentinel slaves mymaster
+redis-cli -p 26379 sentinel sentinels mymaster
+redis-cli -p 26379 sentinel get-master-addr-by-name mymaster
+```
+
+
