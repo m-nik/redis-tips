@@ -74,4 +74,13 @@ redis-cli -p 26379 sentinel sentinels mymaster
 redis-cli -p 26379 sentinel get-master-addr-by-name mymaster
 ```
 
+### Failover test
+```sh
+redis-cli -p 6379 shutdown
+```
 
+```sh
+redis-cli -p 26379 sentinel get-master-addr-by-name mymaster
+redis-cli -p 26379 sentinel failover mymaster
+redis-cli -p 26379 sentinel get-master-addr-by-name mymaster
+```
