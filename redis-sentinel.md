@@ -50,3 +50,14 @@ sentinel parallel-syncs mymaster 1
 /opt/redis/sentinel2/sentinel.conf  --> `26380`
 
 /opt/redis/sentinel3/sentinel.conf  --> `26381`
+
+### Run
+```sh
+redis-server /opt/redis/master/redis.conf &
+redis-server /opt/redis/replica1/redis.conf &
+redis-server /opt/redis/replica2/redis.conf &
+redis-server /opt/redis/sentinel1/sentinel.conf --sentinel &
+redis-server /opt/redis/sentinel2/sentinel.conf --sentinel &
+redis-server /opt/redis/sentinel3/sentinel.conf --sentinel &
+```
+
