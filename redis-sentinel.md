@@ -61,3 +61,8 @@ redis-server /opt/redis/sentinel2/sentinel.conf --sentinel &
 redis-server /opt/redis/sentinel3/sentinel.conf --sentinel &
 ```
 
+### Replication info
+```sh
+redis-cli -p 6379 info replication
+```
+
