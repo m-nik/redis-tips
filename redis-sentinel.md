@@ -47,6 +47,6 @@ sentinel down-after-milliseconds mymaster 5000
 sentinel failover-timeout mymaster 10000
 sentinel parallel-syncs mymaster 1
 ```
-/opt/redis/sentinel2/sentinel.conf  --> 26380
+/opt/redis/sentinel2/sentinel.conf  --> `26380`
 
-/opt/redis/sentinel3/sentinel.conf  --> 26381
+/opt/redis/sentinel3/sentinel.conf  --> `26381`
